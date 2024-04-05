@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net35</TargetFramework>
+    <AssemblyName>slenlen.caughtin4k</AssemblyName>
+    <Product>CaughtIn4K</Product>
+    <Description>Customize the resolution for the video recorder</Description>
+    <Version>0.0.1</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <RestoreAdditionalProjectSources>
+      https://api.nuget.org/v3/index.json;
+      https://nuget.bepinex.dev/v3/index.json
+    </RestoreAdditionalProjectSources>
+    <RootNamespace>CaughtIn4K</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.Core" Version="5.*" PrivateAssets="all" />
+    <PackageReference Include="BepInEx.PluginInfoProps" Version="2.*" PrivateAssets="all" />
+    <PackageReference Include="UnityEngine.Modules" Version="5.6.0" IncludeAssets="compile" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework.TrimEnd(`0123456789`))' == 'net'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>../Assembly-CSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
