@@ -25,3 +25,5 @@ All this mod really does, is change the resolution of the RenderTexture the vide
 By default the resolution is doubled (to 840x840), which might be a bit to high for some, so maybe lower it.
 
 Luckily this is all the mod has to do, since most other stuff in the game already account for any RenderTarget resolution even though it normally can't be changed.
+
+note for SlenLen, I didn't know how to reach you, I don't know if I'm doing the right thing right now. How do I use this mode, where do I change the resolution?
